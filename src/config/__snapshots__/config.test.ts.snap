@@ -1,0 +1,5 @@
+exports['config should match snapshot'] = `
+  Object {
+    "port": 8080
+  }
+`;
