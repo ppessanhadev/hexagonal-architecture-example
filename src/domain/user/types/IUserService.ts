@@ -1,3 +1,5 @@
+import { IUser } from '@shared/providers/user/types/IUser';
+
 export interface IUserService {
-  getUsers: () => any;
+  getUsers: () => Promise<IUser>;
 }
