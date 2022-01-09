@@ -23,7 +23,11 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "paths": {
-      "@config/*": ["config/*"]
+      "@config/*": ["config/*"],
+      "@presentation/*": ["presentation/*"],
+      "@domain/*": ["domain/*"],
+      "@di/*": ["di/*"],
+      "@shared/*": ["shared/*"]
     }
   }
 }

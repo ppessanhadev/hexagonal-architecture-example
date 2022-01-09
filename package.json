@@ -5,14 +5,18 @@
   "main": "dist/server.js",
   "license": "MIT",
   "scripts": {
+    "test": "jest",
     "build": "rm -rf dist && tsc",
-    "start:dev": "ts-node-dev --inspect --transpile-only --ignore node_modules src/server.ts",
-    "start:prod": "node dist/server.js"
+    "start:dev": "ts-node-dev --inspect --transpile-only --ignore node_modules -r tsconfig-paths/register src/index.ts",
+    "start:prod": "node dist/index.js"
   },
   "dependencies": {
+    "axios": "^0.24.0",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "reflect-metadata": "^0.1.13",
+    "tsyringe": "^4.6.0"
   },
   "devDependencies": {
     "@types/cors": "^2.8.12",

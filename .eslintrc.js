@@ -25,4 +25,7 @@ module.exports = {
       typescript: {},
     },
   },
+  env: {
+    "jest/globals": true,
+  }
 };

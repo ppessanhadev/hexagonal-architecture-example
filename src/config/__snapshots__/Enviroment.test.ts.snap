@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Enviroment should match with snapshot 1`] = `
+Object {
+  "baseAPI": "/api/v1",
+  "port": 8004,
+  "userURL": "https://pokeapi.co/api/v2",
+}
+`;
