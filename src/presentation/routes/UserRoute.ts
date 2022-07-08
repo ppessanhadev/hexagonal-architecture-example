@@ -1,4 +1,4 @@
-import { IEnviroment } from '@config/types/IEnviroment';
+import { Enviroment } from '@config/Enviroment';
 import { tokens } from '@di/tokens';
 import { UserController } from '@presentation/controllers/UserController';
 import { Router } from 'express';
@@ -10,7 +10,7 @@ export class UserRoute {
 
   constructor(
     @inject(tokens.Enviroment)
-    private enviroment: IEnviroment,
+    private enviroment: Enviroment,
 
     @inject(tokens.UserController)
     private userController: UserController

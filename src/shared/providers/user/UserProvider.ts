@@ -1,19 +1,18 @@
 import { AxiosError } from 'axios';
 import { inject, injectable } from 'tsyringe';
 import { tokens } from '@di/tokens';
-import { IEnviroment } from '@config/types/IEnviroment';
+import { Enviroment } from '@config/Enviroment';
 import { IUser } from '@shared/providers/user/types/IUser';
-import { IUserProvider } from '@shared/providers/user/types/IUserProvider';
-import { IHTTPProvider } from '@shared/providers/http/types/IHTTPProvider';
+import { AxiosConfig } from '@shared/providers/http/AxiosConfig';
 
 @injectable()
-export class UserProvider implements IUserProvider {
+export class UserProvider  {
   constructor(
     @inject(tokens.Enviroment)
-    private env: IEnviroment,
+    private env: Enviroment,
 
     @inject(tokens.HTTPProvider)
-    private http: IHTTPProvider
+    private http: AxiosConfig
   ) {
     this.http.init(this.env.gets.userURL);
   }

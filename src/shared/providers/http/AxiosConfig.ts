@@ -1,9 +1,8 @@
 import axios, { AxiosError, AxiosInstance, AxiosRequestConfig } from 'axios';
-import { IHTTPProvider } from '@shared/providers/http/types/IHTTPProvider';
 import { injectable } from 'tsyringe';
 
 @injectable()
-export class AxiosConfig implements IHTTPProvider {
+export class AxiosConfig {
   private http: AxiosInstance;
 
   constructor() {

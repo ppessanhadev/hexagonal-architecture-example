@@ -7,8 +7,8 @@
   "scripts": {
     "test": "jest",
     "build": "rm -rf dist && tsc",
-    "start:dev": "ts-node-dev --inspect --transpile-only --ignore node_modules -r tsconfig-paths/register src/index.ts",
-    "start:prod": "node dist/index.js"
+    "dev": "ts-node-dev --inspect --transpile-only --ignore node_modules -r tsconfig-paths/register src/index.ts",
+    "prod": "node dist/index.js"
   },
   "dependencies": {
     "axios": "^0.24.0",

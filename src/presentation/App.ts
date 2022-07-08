@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import { inject, injectable } from 'tsyringe';
 import { tokens } from '@di/tokens';
-import { IEnviroment } from '@config/types/IEnviroment';
+import { Enviroment } from '@config/Enviroment';
 import { UserRoute } from '@presentation/routes/UserRoute';
 
 @injectable()
@@ -11,7 +11,7 @@ export class App {
 
   constructor(
     @inject(tokens.Enviroment)
-    private enviroment: IEnviroment,
+    private enviroment: Enviroment,
 
     @inject(tokens.UserRoute)
     private userRoute: UserRoute

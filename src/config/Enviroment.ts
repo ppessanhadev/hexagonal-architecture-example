@@ -1,9 +1,8 @@
-import { IEnviroment } from '@config/types/IEnviroment';
 import { injectable } from 'tsyringe';
 import 'dotenv/config';
 
 @injectable()
-export class Enviroment implements IEnviroment {
+export class Enviroment {
   get gets() {
     return {
       port: Number(process.env.PORT) || 8004,
